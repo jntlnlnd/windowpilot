@@ -1,6 +1,6 @@
 # WindowPilot
 
-**Download: [click here](https://raw.githubusercontent.com/jntlnlnd/panepilot/main/release/WindowPilot.dmg)**
+**Download: [click here](https://raw.githubusercontent.com/jntlnlnd/windowpilot/main/release/WindowPilot.dmg)**
 
 Windows-style window switcher for macOS. It replaces the usual application-level `Command+Tab` flow with a window-level switcher backed by macOS Accessibility APIs.
 
@@ -55,7 +55,7 @@ scripts/generate_icons.sh
 
 ## Download
 
-The current DMG can be downloaded directly from [release/WindowPilot.dmg](https://raw.githubusercontent.com/jntlnlnd/panepilot/main/release/WindowPilot.dmg). This build is ad-hoc signed and not notarized, so macOS may show a first-run warning.
+The current DMG can be downloaded directly from [release/WindowPilot.dmg](https://raw.githubusercontent.com/jntlnlnd/windowpilot/main/release/WindowPilot.dmg). This build is ad-hoc signed and not notarized, so macOS may show a first-run warning.
 
 If `swift` or `xcodebuild` fails with an active developer path error, install or select Xcode first:
 

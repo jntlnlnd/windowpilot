@@ -125,7 +125,7 @@ git push origin vX.Y.Z
 Current remote:
 
 ```text
-https://github.com/jntlnlnd/panepilot.git
+https://github.com/jntlnlnd/windowpilot.git
 ```
 
 ## Notarization
