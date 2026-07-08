@@ -3,16 +3,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "PanePilot",
+    name: "WindowPilot",
     platforms: [
         .macOS(.v13)
     ],
     products: [
-        .executable(name: "PanePilot", targets: ["PanePilot"])
+        .executable(name: "WindowPilot", targets: ["WindowPilot"])
     ],
     targets: [
         .executableTarget(
-            name: "PanePilot",
+            name: "WindowPilot",
             exclude: [
                 "Resources/Assets/AppIconSource.png",
                 "Resources/AppIcon.icns",

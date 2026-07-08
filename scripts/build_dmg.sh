@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-APP_NAME="PanePilot"
+APP_NAME="WindowPilot"
 APP_DIR="$ROOT_DIR/.build/app/$APP_NAME.app"
 DIST_DIR="$ROOT_DIR/dist"
 STAGING_DIR="$ROOT_DIR/.build/dmg-staging"

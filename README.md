@@ -1,6 +1,6 @@
-# PanePilot
+# WindowPilot
 
-**Download: [click here](https://raw.githubusercontent.com/jntlnlnd/panepilot/main/release/PanePilot.dmg)**
+**Download: [click here](https://raw.githubusercontent.com/jntlnlnd/panepilot/main/release/WindowPilot.dmg)**
 
 Windows-style window switcher for macOS. It replaces the usual application-level `Command+Tab` flow with a window-level switcher backed by macOS Accessibility APIs.
 
@@ -22,14 +22,14 @@ The app needs Accessibility permission because macOS only allows another app to 
 
 1. Build and launch the app.
 2. Open `System Settings > Privacy & Security > Accessibility`.
-3. Enable `PanePilot`.
+3. Enable `WindowPilot`.
 4. Open `System Settings > Privacy & Security > Screen & System Audio Recording`.
-5. Enable `PanePilot` if thumbnails are blank.
+5. Enable `WindowPilot` if thumbnails are blank.
 6. Relaunch the app if the event tap does not start immediately.
 
 ## Open at login
 
-On first launch, PanePilot asks whether it should open at login. You can also toggle this later from the menu bar item with `Open at Login`.
+On first launch, WindowPilot asks whether it should open at login. You can also toggle this later from the menu bar item with `Open at Login`.
 
 ## Build
 
@@ -37,17 +37,17 @@ This repository is a Swift Package that can also be wrapped as a `.app` bundle:
 
 ```sh
 scripts/build_app.sh
-open .build/app/PanePilot.app
+open .build/app/WindowPilot.app
 ```
 
 To build a local installer DMG:
 
 ```sh
 scripts/build_dmg.sh
-open dist/PanePilot.dmg
+open dist/WindowPilot.dmg
 ```
 
-If `Sources/PanePilot/Resources/Assets/AppIconSource.png` changes, regenerate the macOS icon first:
+If `Sources/WindowPilot/Resources/Assets/AppIconSource.png` changes, regenerate the macOS icon first:
 
 ```sh
 scripts/generate_icons.sh
@@ -55,7 +55,7 @@ scripts/generate_icons.sh
 
 ## Download
 
-The current DMG can be downloaded directly from [release/PanePilot.dmg](https://raw.githubusercontent.com/jntlnlnd/panepilot/main/release/PanePilot.dmg). This build is ad-hoc signed and not notarized, so macOS may show a first-run warning.
+The current DMG can be downloaded directly from [release/WindowPilot.dmg](https://raw.githubusercontent.com/jntlnlnd/panepilot/main/release/WindowPilot.dmg). This build is ad-hoc signed and not notarized, so macOS may show a first-run warning.
 
 If `swift` or `xcodebuild` fails with an active developer path error, install or select Xcode first:
 

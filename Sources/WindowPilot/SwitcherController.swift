@@ -19,7 +19,7 @@ final class SwitcherController {
     func handleCommandTab(reverse: Bool) {
         if !accessibility.isTrusted {
             DiagnosticLog.write("Command+Tab ignored because Accessibility is not trusted")
-            NSLog("PanePilot: Accessibility is not trusted")
+            NSLog("WindowPilot: Accessibility is not trusted")
             accessibility.requestTrustIfNeeded(prompt: true)
             return
         }
@@ -39,7 +39,7 @@ final class SwitcherController {
 
         if let selected {
             DiagnosticLog.write("focusing selected window")
-            NSLog("PanePilot: focusing \(selected.appName) - \(selected.title)")
+            NSLog("WindowPilot: focusing \(selected.appName) - \(selected.title)")
             accessibility.focus(selected)
         }
     }
@@ -68,7 +68,7 @@ final class SwitcherController {
     private func begin(reverse: Bool) {
         windows = accessibility.visibleWindows()
         DiagnosticLog.write("discovered \(windows.count) switchable windows")
-        NSLog("PanePilot: discovered \(windows.count) switchable windows")
+        NSLog("WindowPilot: discovered \(windows.count) switchable windows")
         guard !windows.isEmpty else { return }
 
         if windows.count == 1 {

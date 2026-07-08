@@ -34,7 +34,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         item.button?.image = StatusIconFactory.make(active: false)
         item.button?.imagePosition = .imageOnly
-        item.button?.toolTip = "PanePilot is starting"
+        item.button?.toolTip = "WindowPilot is starting"
 
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Show Switcher Now", action: #selector(showSwitcherNow), keyEquivalent: ""))
@@ -50,7 +50,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Request Accessibility Permission", action: #selector(requestAccessibilityPermission), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Request Screen Recording Permission", action: #selector(requestScreenRecordingPermission), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit PanePilot", action: #selector(quit), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Quit WindowPilot", action: #selector(quit), keyEquivalent: "q"))
         item.menu = menu
 
         statusItem = item
@@ -79,7 +79,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         )
 
         let alert = NSAlert()
-        alert.messageText = "PanePilot Diagnostics"
+        alert.messageText = "WindowPilot Diagnostics"
         alert.informativeText = diagnostics
         alert.addButton(withTitle: "OK")
         alert.runModal()
@@ -146,7 +146,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let trusted = switcherController?.accessibility.isTrusted ?? false
         let running = eventTapController?.isRunning ?? false
         statusItem?.button?.image = StatusIconFactory.make(active: trusted && running)
-        statusItem?.button?.toolTip = trusted && running ? "PanePilot is active" : "PanePilot needs attention"
+        statusItem?.button?.toolTip = trusted && running ? "WindowPilot is active" : "WindowPilot needs attention"
         updateLoginItemMenu()
         updateDiagnosticLoggingMenu()
         DiagnosticLog.write("status trusted=\(trusted) eventTapRunning=\(running)")
@@ -159,8 +159,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             guard let self, self.loginItemService.shouldPrompt else { return }
 
             let alert = NSAlert()
-            alert.messageText = "Open PanePilot at login?"
-            alert.informativeText = "PanePilot works best as a background utility. Add it to Login Items so window switching is available after you start your Mac."
+            alert.messageText = "Open WindowPilot at login?"
+            alert.informativeText = "WindowPilot works best as a background utility. Add it to Login Items so window switching is available after you start your Mac."
             alert.addButton(withTitle: "Enable")
             alert.addButton(withTitle: "Not Now")
             alert.addButton(withTitle: "Don't Ask Again")

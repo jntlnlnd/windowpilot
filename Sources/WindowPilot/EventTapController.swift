@@ -55,14 +55,14 @@ final class EventTapController {
         CGEvent.tapEnable(tap: tap, enable: true)
         lastError = nil
         DiagnosticLog.write("event tap started")
-        NSLog("PanePilot: event tap started")
+        NSLog("WindowPilot: event tap started")
         return true
     }
 
     private func handle(_ proxy: CGEventTapProxy, type: CGEventType, event: CGEvent) -> Unmanaged<CGEvent>? {
         if type == .tapDisabledByTimeout || type == .tapDisabledByUserInput {
             DiagnosticLog.write("event tap disabled by system; re-enabling")
-            NSLog("PanePilot: event tap disabled by system; re-enabling")
+            NSLog("WindowPilot: event tap disabled by system; re-enabling")
             if let eventTap {
                 CGEvent.tapEnable(tap: eventTap, enable: true)
             }
@@ -78,7 +78,7 @@ final class EventTapController {
 
         if type == .keyDown, commandDown, isTab {
             DiagnosticLog.write("Command+Tab captured")
-            NSLog("PanePilot: Command+Tab captured")
+            NSLog("WindowPilot: Command+Tab captured")
             switcher.handleCommandTab(reverse: shiftDown)
             return nil
         }
@@ -132,8 +132,8 @@ final class EventTapController {
 
     private func showEventTapFailure() {
         let alert = NSAlert()
-        alert.messageText = "PanePilot could not start keyboard monitoring."
-        alert.informativeText = "Enable Accessibility permission for PanePilot, then relaunch the app."
+        alert.messageText = "WindowPilot could not start keyboard monitoring."
+        alert.informativeText = "Enable Accessibility permission for WindowPilot, then relaunch the app."
         alert.alertStyle = .warning
         alert.addButton(withTitle: "OK")
         alert.runModal()

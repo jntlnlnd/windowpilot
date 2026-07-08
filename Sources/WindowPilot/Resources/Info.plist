@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleExecutable</key>
-	<string>PanePilot</string>
+	<string>WindowPilot</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.jntlnlnd.panepilot</string>
+	<string>com.jntlnlnd.windowpilot</string>
 	<key>CFBundleName</key>
-	<string>PanePilot</string>
+	<string>WindowPilot</string>
 	<key>CFBundleDisplayName</key>
-	<string>PanePilot</string>
+	<string>WindowPilot</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
 	<key>CFBundlePackageType</key>

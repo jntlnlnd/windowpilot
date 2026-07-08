@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-RESOURCE_DIR="$ROOT_DIR/Sources/PanePilot/Resources"
+RESOURCE_DIR="$ROOT_DIR/Sources/WindowPilot/Resources"
 SOURCE_ICON="$RESOURCE_DIR/Assets/AppIconSource.png"
 ICONSET_DIR="$ROOT_DIR/.build/AppIcon.iconset"
 

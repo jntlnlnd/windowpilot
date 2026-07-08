@@ -1,6 +1,6 @@
 # Privacy
 
-PanePilot is a local macOS utility.
+WindowPilot is a local macOS utility.
 
 ## What the app accesses
 
@@ -8,7 +8,7 @@ PanePilot is a local macOS utility.
 - Window thumbnails, when Screen Recording permission is granted.
 - Keyboard events needed to intercept the switcher shortcut.
 
-PanePilot does not continuously record the screen. It captures still window thumbnails only when those windows are shown in the switcher overlay, caches them while that overlay is open, and discards the cache when the overlay closes.
+WindowPilot does not continuously record the screen. It captures still window thumbnails only when those windows are shown in the switcher overlay, caches them while that overlay is open, and discards the cache when the overlay closes.
 
 ## What the app stores
 
@@ -18,7 +18,7 @@ PanePilot does not continuously record the screen. It captures still window thum
 
 ## What the app sends
 
-Nothing. PanePilot has no network integration and does not send analytics, telemetry, screenshots, window titles, or usage data.
+Nothing. WindowPilot has no network integration and does not send analytics, telemetry, screenshots, window titles, or usage data.
 
 ## Permissions can be revoked
 

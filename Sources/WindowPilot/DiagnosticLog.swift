@@ -2,11 +2,11 @@ import Foundation
 
 enum DiagnosticLog {
     private static let enabledKey = "diagnosticLoggingEnabled"
-    private static let logURL = URL(fileURLWithPath: "/tmp/panepilot.log")
+    private static let logURL = URL(fileURLWithPath: "/tmp/windowpilot.log")
 
     static var isEnabled: Bool {
         UserDefaults.standard.bool(forKey: enabledKey) ||
-        ProcessInfo.processInfo.environment["PANEPILOT_DEBUG_LOG"] == "1"
+        ProcessInfo.processInfo.environment["WINDOWPILOT_DEBUG_LOG"] == "1"
     }
 
     static func setEnabled(_ enabled: Bool) {

@@ -1,6 +1,6 @@
 # Architecture
 
-PanePilot is a small macOS menu bar utility with three responsibilities:
+WindowPilot is a small macOS menu bar utility with three responsibilities:
 
 1. Capture the switcher shortcut.
 2. Build an ordered list of switchable windows.

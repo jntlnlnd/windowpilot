@@ -8,8 +8,8 @@ Use this checklist before publishing a GitHub release.
 scripts/generate_icons.sh
 scripts/build_app.sh
 scripts/build_dmg.sh
-codesign --verify --deep --strict .build/app/PanePilot.app
-codesign --verify --deep --strict dist/PanePilot.dmg
+codesign --verify --deep --strict .build/app/WindowPilot.app
+codesign --verify --deep --strict dist/WindowPilot.dmg
 ```
 
 Open the app from `/Applications` and verify:
@@ -31,7 +31,7 @@ Mention clearly:
 - The app has no network/analytics behavior.
 - Ad-hoc or unsigned builds may show Gatekeeper warnings unless notarized.
 
-For this initial public repository, `release/PanePilot.dmg` is committed so the app can be downloaded directly. For future releases, prefer uploading `dist/PanePilot.dmg` as a GitHub Release asset instead of committing generated binaries.
+For this initial public repository, `release/WindowPilot.dmg` is committed so the app can be downloaded directly. For future releases, prefer uploading `dist/WindowPilot.dmg` as a GitHub Release asset instead of committing generated binaries.
 
 ## Legal and branding review
 
@@ -46,9 +46,9 @@ For broad distribution, sign and notarize:
 
 ```sh
 # Example only; requires Apple Developer Program credentials.
-codesign --force --options runtime --timestamp --sign "Developer ID Application: YOUR NAME (TEAMID)" .build/app/PanePilot.app
-ditto -c -k --keepParent .build/app/PanePilot.app .build/PanePilot.zip
-xcrun notarytool submit .build/PanePilot.zip --keychain-profile YOUR_PROFILE --wait
-xcrun stapler staple .build/app/PanePilot.app
+codesign --force --options runtime --timestamp --sign "Developer ID Application: YOUR NAME (TEAMID)" .build/app/WindowPilot.app
+ditto -c -k --keepParent .build/app/WindowPilot.app .build/WindowPilot.zip
+xcrun notarytool submit .build/WindowPilot.zip --keychain-profile YOUR_PROFILE --wait
+xcrun stapler staple .build/app/WindowPilot.app
 scripts/build_dmg.sh
 ```
