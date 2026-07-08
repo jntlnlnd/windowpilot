@@ -57,6 +57,37 @@ scripts/generate_icons.sh
 
 The current DMG can be downloaded directly from [release/WindowPilot.dmg](https://raw.githubusercontent.com/jntlnlnd/windowpilot/main/release/WindowPilot.dmg). This build is ad-hoc signed and not notarized, so macOS may show a first-run warning.
 
+### If macOS blocks the DMG
+
+Because this build is not notarized with an Apple Developer ID, macOS may show a warning like this when you open the downloaded DMG:
+
+![macOS warning that WindowPilot.dmg cannot be opened](docs/assets/gatekeeper-warning.png)
+
+To allow it:
+
+1. Click `Done`.
+2. Open `System Settings > Privacy & Security`.
+3. In the `Security` section, find the message that `WindowPilot.dmg` was blocked.
+4. Click `Open Anyway`.
+
+![Privacy & Security Open Anyway button for WindowPilot.dmg](docs/assets/gatekeeper-privacy-open-anyway.png)
+
+After that, open `WindowPilot.dmg` again and drag `WindowPilot.app` into Applications. If macOS blocks `WindowPilot.app` on first launch as well, repeat the same `Privacy & Security > Open Anyway` flow for the app.
+
+If you prefer Terminal, you can remove the quarantine attribute from the downloaded DMG:
+
+```sh
+xattr -d com.apple.quarantine ~/Downloads/WindowPilot.dmg
+open ~/Downloads/WindowPilot.dmg
+```
+
+If the installed app is also blocked:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/WindowPilot.app
+open /Applications/WindowPilot.app
+```
+
 If `swift` or `xcodebuild` fails with an active developer path error, install or select Xcode first:
 
 ```sh
