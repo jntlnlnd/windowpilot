@@ -66,3 +66,5 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 `Command+Tab` is normally owned by the system. This app uses a session-level `CGEventTap`, which requires Accessibility permission and may be blocked by secure input contexts. The switching itself uses `AXUIElement` windows rather than private APIs, so minimized windows and some non-standard app windows may not appear yet.
 
 The app has no network integration or analytics. See [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md) before publishing a release.
+
+For repeatable maintenance and release procedures, see [AGENTS.md](AGENTS.md).

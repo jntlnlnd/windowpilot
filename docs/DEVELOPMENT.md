@@ -38,6 +38,8 @@ The DMG is intended for local installation and contains `PanePilot.app` plus an 
 
 After the first launch, grant Accessibility permission in System Settings and relaunch the app.
 
+For the fuller repeatable release and publishing workflow, see `AGENTS.md` and `RELEASE.md`.
+
 ## Manual verification checklist
 
 1. Launch the app and confirm the `HS` menu bar item appears.
